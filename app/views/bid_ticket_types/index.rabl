@@ -1,0 +1,1 @@
+collection @bid_ticket_types

@@ -1,0 +1,2 @@
+module AffiliatePaymentsHelper
+end

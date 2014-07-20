@@ -1,0 +1,46 @@
+%p
+  %a{:href => "/broker_payments/new"}
+    Create New Broker Payment
+
+%p
+  Current Broker Payments:
+
+%table{:border => "1"}
+  %tr
+    %td
+      = "id"
+    %td
+      = "modify"
+    %td
+      = "delete"
+    %td
+      = "amount"
+    %td
+      = "payment_type"
+    %td
+      = "status"
+    %td
+      = "created_at"
+    %td
+      = "updated_at"
+
+  - @brokerpayments.each do |brokerpayment|
+    %tr
+      %td
+        = brokerpayment.id
+      %td
+        %a{:href => "/broker_payments/update?id="+brokerpayment.id.to_s}
+          Modify
+      %td
+        %a{:href => "/broker_payments/destroy?id="+brokerpayment.id.to_s}
+          Delete
+      %td
+        = brokerpayment.amount
+      %td
+        = brokerpayment.payment_type
+      %td
+        = brokerpayment.status
+      %td
+        = brokerpayment.created_at
+      %td
+        = brokerpayment.updated_at

@@ -1,0 +1,64 @@
+%p
+  Modify Broker Detail
+
+%form{:action => "/broker_details/modify", :method => "post"}
+  %input{:type => "hidden", :name => "id", :value => @brokerdetail.id}
+  %p
+    %label{:for => "user_id"}
+      User Id
+    %br
+    %input{:type => "text", :name => "user_id", :value => @brokerdetail.user_id}
+  %p
+    %label{:for => "kickback_percentage"}
+      Kickback Percentage
+    %br
+    %input{:type => "number", :step => "any", :name => "kickback_percentage", :value => @brokerdetail.kickback_percentage}
+  %p
+    %label{:for => "kickback_flat_fee"}
+      Kickback Flat Fee
+    %br
+    %input{:type => "number", :step => "any", :name => "kickback_flat_fee", :value => @brokerdetail.kickback_flat_fee}
+  %p
+    %label{:for => "kickback_type"}
+      Kickback Type
+    %br
+    %input{:type => "text", :name => "kickback_type", :value => @brokerdetail.kickback_type}
+  %p
+    %label{:for => "reduction_percentage"}
+      Reduction Percentage
+    %br
+    %input{:type => "number", :step => "any", :name => "reduction_percentage", :value => @brokerdetail.reduction_percentage}
+  %p
+    %label{:for => "reduction_flat_fee"}
+      Reduction Flat Fee
+    %br
+    %input{:type => "number", :step => "any", :name => "reduction_flat_fee", :value => @brokerdetail.reduction_flat_fee}
+  %p
+    %label{:for => "reduction_type"}
+      Reduction Type
+    %br
+    %input{:type => "text", :name => "reduction_type", :value => @brokerdetail.reduction_type}
+  %p
+    %label{:for => "payment_threshold"}
+      Payment Threshold
+    %br
+    %input{:type => "number", :step => "any", :name => "payment_threshold", :value => @brokerdetail.payment_threshold}
+  %p
+    %label{:for => "locked"}
+      Locked
+    %br
+    %input{:type => "checkbox", :name => "locked", :checked => @brokerdetail.locked ? true : false}
+  %p
+    %label{:for => "payment_method"}
+      Payment Method
+    %br
+    %input{:type => "text", :name => "payment_method", :value => @brokerdetail.payment_method}
+  %p
+    %label{:for => "payments_active"}
+      Payments Active
+    %br
+    %input{:type => "checkbox", :name => "payments_active", :checked => @brokerdetail.payments_active ? true : false}
+
+
+  %p
+    %input{:type => "submit", :value => "Save Updates", :class => "button"}

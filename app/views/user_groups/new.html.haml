@@ -1,0 +1,17 @@
+%p
+  New User Group
+
+%form{:action => "/user_groups/create", :method => "post"}
+  %p
+    %label{:for => "name"}
+      Name
+    %br
+    %input#name{:type => "text", :name => "name"}
+  %p
+    %label{:for => "admin"}
+      Admin
+    %br
+    %input{:type => "checkbox", :name => "admin"}
+
+  %p
+    %input{:type => "submit", :value => "Create User Group", :class => "button"}

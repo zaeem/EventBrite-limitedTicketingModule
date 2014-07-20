@@ -1,0 +1,42 @@
+%p
+  %a{:href => "/broker_payments_sales/new"}
+    Create New Broker Payment Sale
+
+%p
+  Current Broker Payment Sales:
+
+%table{:border => "1"}
+  %tr
+    %td
+      = "id"
+    %td
+      = "modify"
+    %td
+      = "delete"
+    %td
+      = "broker_payment_id"
+    %td
+      = "sale_id"
+    %td
+      = "created_at"
+    %td
+      = "updated_at"
+
+  - @brokerpaymentssales.each do |brokerpaymentsales|
+    %tr
+      %td
+        = brokerpaymentsales.id
+      %td
+        %a{:href => "/broker_payments_sales/update?id="+brokerpaymentsales.id.to_s}
+          Modify
+      %td
+        %a{:href => "/broker_payments_sales/destroy?id="+brokerpaymentsales.id.to_s}
+          Delete
+      %td
+        = brokerpaymentsales.broker_payment_id
+      %td
+        = brokerpaymentsales.sale_id
+      %td
+        = brokerpaymentsales.created_at
+      %td
+        = brokerpaymentsales.updated_at

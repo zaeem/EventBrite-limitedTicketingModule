@@ -1,0 +1,18 @@
+%p
+  Modify Bid Ticket Type
+
+%form{:action => "/bid_ticket_types/modify", :method => "post"}
+  %input{:type => "hidden", :name => "id", :value => @bid_ticket_type.id}
+  %p
+    %label{:for => "bid_id"}
+      Bid Id
+    %br
+    %input{:type => "text", :name => "bid_id", :value => @bid_ticket_type.bid_id}
+  %p
+    %label{:for => "ticket_type_id"}
+      Ticket Type Id
+    %br
+    %input{:type => "text", :name => "ticket_type_id", :value => @bid_ticket_type.ticket_type_id}
+
+  %p
+    %input{:type => "submit", :value => "Save Updates", :class => "button"}

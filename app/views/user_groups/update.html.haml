@@ -1,0 +1,18 @@
+%p
+  Modify User
+
+%form{:action => "/user_groups/modify", :method => "post"}
+  %input{:type => "hidden", :name => "id", :value => @user_group.id}
+  %p
+    %label{:for => "name"}
+      Name
+    %br
+    %input#name{:type => "text", :name => "name", :value => @user_group.name}
+  %p
+    %label{:for => "admin"}
+      Admin
+    %br
+    %input{:type => "checkbox", :name => "admin", :checked => @user_group.admin ? true : false}
+
+  %p
+    %input{:type => "submit", :value => "Save Updates", :class => "button"}

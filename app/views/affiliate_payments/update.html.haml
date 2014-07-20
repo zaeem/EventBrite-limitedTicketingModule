@@ -1,0 +1,28 @@
+%p
+  Modify Affiliate Payment
+
+%form{:action => "/affiliate_payments/modify", :method => "post"}
+  %input{:type => "hidden", :name => "id", :value => @affiliate_payment.id}
+  %p
+    %label{:for => "user_id"}
+      User Id
+    %br
+    %input#user_id{:type => "text", :name => "user_id", :value => @affiliate_payment.user_id}
+  %p
+    %label{:for => "amount"}
+      Amount
+    %br
+    %input{:type => "number", :step => "any", :name => "amount", :value => @affiliate_payment.amount}
+  %p
+    %label{:for => "affiliate_type"}
+      Affiliate Type
+    %br
+    %input{:type => "text", :name => "affiliate_type", :value => @affiliate_payment.affiliate_type}
+  %p
+    %label{:for => "status"}
+      Status
+    %br
+    %input{:type => "text", :name => "status", :value => @affiliate_payment.status}
+
+  %p
+    %input{:type => "submit", :value => "Save Updates", :class => "button"}

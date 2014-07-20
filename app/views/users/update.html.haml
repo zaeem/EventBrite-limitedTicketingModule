@@ -1,0 +1,78 @@
+%p
+  Modify User
+
+%form{:action => "/users/modify", :method => "post"}
+  %input{:type => "hidden", :name => "id", :value => @user.id}
+  %p
+    %label{:for => "email"}
+      Email
+    %br
+    %input#email{:type => "text", :name => "email", :value => @user.email}
+  %p
+    %label{:for => "username"}
+      Username
+    %br
+    %input{:type => "text", :name => "username", :value => @user.username}
+  %p
+    %label{:for => "password"}
+      Password
+    %br
+    %input{:type => "text", :name => "password", :value => @user.password}
+  %p
+    %label{:for => "title"}
+      Title
+    %br
+    %input{:type => "text", :name => "title", :value => @user.title}
+  %p
+    %label{:for => "first_name"}
+      First Name
+    %br
+    %input{:type => "text", :name => "first_name", :value => @user.first_name}
+  %p
+    %label{:for => "last_name"}
+      Last Name
+    %br
+    %input{:type => "text", :name => "last_name", :value => @user.last_name}
+  %p
+    %label{:for => "middle_name"}
+      Middle Name
+    %br
+    %input{:type => "text", :name => "middle_name", :value => @user.middle_name}
+  %p
+    %label{:for => "phone"}
+      Phone
+    %br
+    %input{:type => "text", :name => "phone", :value => @user.phone}
+  %p
+    %label{:for => "phone_daytime"}
+      Phone Daytime
+    %br
+    %input{:type => "text", :name => "phone_daytime", :value => @user.phone_daytime}
+  %p
+    %label{:for => "phone_evening"}
+      Phone Evening
+    %br
+    %input{:type => "text", :name => "phone_evening", :value => @user.phone_evening}
+  %p
+    %label{:for => "phone_cell"}
+      Phone Cell
+    %br
+    %input{:type => "text", :name => "phone_cell", :value => @user.phone_cell}
+  %p
+    %label{:for => "subscribe"}
+      Subscribe
+    %br
+    %input{:type => "checkbox", :name => "subscribe", :checked => @user.subscribe ? true : false}
+  %p
+    %label{:for => "sale_commission"}
+      Sale Commission
+    %br
+    %input{:type => "text", :name => "sale_commission", :value => @user.sale_commission}
+  %p
+    %label{:for => "negotiation_commission"}
+      Negotiation Commission
+    %br
+    %input{:type => "text", :name => "negotiation_commission", :value => @user.negotiation_commission}
+
+  %p
+    %input{:type => "submit", :value => "Save Updates", :class => "button"}

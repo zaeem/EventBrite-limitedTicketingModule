@@ -1,0 +1,77 @@
+%p
+  New User
+
+%form{:action => "/users/create", :method => "post"}
+  %p
+    %label{:for => "email"}
+      Email
+    %br
+    %input#email{:type => "text", :name => "email"}
+  %p
+    %label{:for => "username"}
+      Username
+    %br
+    %input{:type => "text", :name => "username"}
+  %p
+    %label{:for => "password"}
+      Password
+    %br
+    %input{:type => "text", :name => "password"}
+  %p
+    %label{:for => "title"}
+      Title
+    %br
+    %input{:type => "text", :name => "title"}
+  %p
+    %label{:for => "first_name"}
+      First Name
+    %br
+    %input{:type => "text", :name => "first_name"}
+  %p
+    %label{:for => "last_name"}
+      Last Name
+    %br
+    %input{:type => "text", :name => "last_name"}
+  %p
+    %label{:for => "middle_name"}
+      Middle Name
+    %br
+    %input{:type => "text", :name => "middle_name"}
+  %p
+    %label{:for => "phone"}
+      Phone
+    %br
+    %input{:type => "text", :name => "phone"}
+  %p
+    %label{:for => "phone_daytime"}
+      Phone Daytime
+    %br
+    %input{:type => "text", :name => "phone_daytime"}
+  %p
+    %label{:for => "phone_evening"}
+      Phone Evening
+    %br
+    %input{:type => "text", :name => "phone_evening"}
+  %p
+    %label{:for => "phone_cell"}
+      Phone Cell
+    %br
+    %input{:type => "text", :name => "phone_cell"}
+  %p
+    %label{:for => "subscribe"}
+      Subscribe
+    %br
+    %input{:type => "checkbox", :name => "subscribe"}
+  %p
+    %label{:for => "sale_commission"}
+      Sale Commission
+    %br
+    %input{:type => "text", :name => "sale_commission"}
+  %p
+    %label{:for => "negotiation_commission"}
+      Negotiation Commission
+    %br
+    %input{:type => "text", :name => "negotiation_commission"}
+
+  %p
+    %input{:type => "submit", :value => "Create User", :class => "button"}

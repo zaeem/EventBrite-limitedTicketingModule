@@ -1,0 +1,1 @@
+collection @ticket_statuses

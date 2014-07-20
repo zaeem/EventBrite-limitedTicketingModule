@@ -1,0 +1,23 @@
+%p
+  Modify Broker Payment
+
+%form{:action => "/broker_payments/modify", :method => "post"}
+  %input{:type => "hidden", :name => "id", :value => @brokerpayment.id}
+    %p
+      %label{:for => "amount"}
+        Amount
+      %br
+      %input{:type => "number", :step => "any", :name => "amount", :value => @brokerpayment.amount}
+    %p
+      %label{:for => "payment_type"}
+        Payment Type
+      %br
+      %input{:type => "text", :name => "payment_type", :value => @brokerpayment.payment_type}
+    %p
+      %label{:for => "status"}
+        Status
+      %br
+      %input{:type => "text", :name => "status", :value => @brokerpayment.status}
+
+  %p
+    %input{:type => "submit", :value => "Save Updates", :class => "button"}

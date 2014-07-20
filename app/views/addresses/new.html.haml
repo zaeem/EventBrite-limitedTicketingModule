@@ -1,0 +1,47 @@
+%p
+  New Address
+
+%form{:action => "/addresses/create", :method => "post"}
+  %p
+    %label{:for => "user_id"}
+      User Id
+    %br
+    %input#user_id{:type => "text", :name => "user_id"}
+  %p
+    %label{:for => "type"}
+      Type
+    %br
+    %input{:type => "text", :name => "type"}
+  %p
+    %label{:for => "name"}
+      Name
+    %br
+    %input{:type => "text", :name => "name"}
+  %p
+    %label{:for => "address1"}
+      Address 1
+    %br
+    %input{:type => "text", :name => "address1"}
+  %p
+    %label{:for => "address2"}
+      Address 2
+    %br
+    %input{:type => "text", :name => "address2"}
+  %p
+    %label{:for => "city"}
+      City
+    %br
+    %input{:type => "text", :name => "city"}
+  %p
+    %label{:for => "state"}
+      State
+    %br
+    %input{:type => "text", :name => "state"}
+  %p
+    %label{:for => "phone"}
+      Phone
+    %br
+    %input{:type => "text", :name => "phone"}
+
+  %p
+    %input{:type => "submit", :value => "Create Address", :class => "button"}

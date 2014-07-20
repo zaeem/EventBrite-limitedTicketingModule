@@ -1,0 +1,62 @@
+%p
+  New Broker Detail
+
+%form{:action => "/broker_details/create", :method => "post"}
+  %p
+    %label{:for => "user_id"}
+      User Id
+    %br
+    %input{:type => "text", :name => "user_id"}
+  %p
+    %label{:for => "kickback_percentage"}
+      Kickback Percentage
+    %br
+    %input{:type => "number", :step => "any", :name => "kickback_percentage"}
+  %p
+    %label{:for => "kickback_flat_fee"}
+      Kickback Flat Fee
+    %br
+    %input{:type => "number", :step => "any", :name => "kickback_flat_fee"}
+  %p
+    %label{:for => "kickback_type"}
+      Kickback Type
+    %br
+    %input{:type => "text", :name => "kickback_type"}
+  %p
+    %label{:for => "reduction_percentage"}
+      Reduction Percentage
+    %br
+    %input{:type => "number", :step => "any", :name => "reduction_percentage"}
+  %p
+    %label{:for => "reduction_flat_fee"}
+      Reduction Flat Fee
+    %br
+    %input{:type => "number", :step => "any", :name => "reduction_flat_fee"}
+  %p
+    %label{:for => "reduction_type"}
+      Reduction Type
+    %br
+    %input{:type => "text", :name => "reduction_type"}
+  %p
+    %label{:for => "payment_threshold"}
+      Payment Threshold
+    %br
+    %input{:type => "number", :step => "any", :name => "payment_threshold"}
+  %p
+    %label{:for => "locked"}
+      Locked
+    %br
+    %input{:type => "checkbox", :name => "locked"}
+  %p
+    %label{:for => "payment_method"}
+      Payment Method
+    %br
+    %input{:type => "text", :name => "payment_method"}
+  %p
+    %label{:for => "payments_active"}
+      Payments Active
+    %br
+    %input{:type => "checkbox", :name => "payments_active"}
+
+  %p
+    %input{:type => "submit", :value => "Create Broker Detail", :class => "button"}

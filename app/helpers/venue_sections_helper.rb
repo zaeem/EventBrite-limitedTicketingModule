@@ -1,0 +1,2 @@
+module VenueSectionsHelper
+end

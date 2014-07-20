@@ -1,0 +1,58 @@
+%p
+  %a{:href => "/coupon_codes/new"}
+    Create New Coupon Code
+
+%p
+  Current Coupon Codes:
+
+%table{:border => "1"}
+  %tr
+    %td
+      = "id"
+    %td
+      = "modify"
+    %td
+      = "delete"
+    %td
+      = "code"
+    %td
+      = "discount_type"
+    %td
+      = "amount"
+    %td
+      = "quantity"
+    %td
+      = "starts_at"
+    %td
+      = "expires_at"
+    %td
+      = "created_at"
+    %td
+      = "updated_at"
+
+  - @couponcodes.each do |couponcodes|
+    %tr
+      %td
+        = couponcodes.id
+      %td
+        %a{:href => "/coupon_codes/update?id="+couponcodes.id.to_s}
+          Modify
+      %td
+        %a{:href => "/coupon_codes/destroy?id="+couponcodes.id.to_s}
+          Delete
+      %td
+        = couponcodes.code
+      %td
+        = couponcodes.discount_type
+      %td
+        = couponcodes.amount
+      %td
+        = couponcodes.quantity
+      %td
+        = couponcodes.starts_at
+      %td
+        = couponcodes.expires_at
+      %td
+        = couponcodes.created_at
+      %td
+        = couponcodes.updated_at

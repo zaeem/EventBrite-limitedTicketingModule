@@ -1,0 +1,38 @@
+%p
+  Modify Coupon Code
+
+%form{:action => "/coupon_codes/modify", :method => "post"}
+  %input{:type => "hidden", :name => "id", :value => @couponcode.id}
+  %p
+    %label{:for => "code"}
+      Code
+    %br
+    %input{:type => "text", :name => "code", :value => @couponcode.code}
+  %p
+    %label{:for => "discount_type"}
+      Discount Type
+    %br
+    %input{:type => "text", :name => "discount_type", :value => @couponcode.discount_type}
+  %p
+    %label{:for => "amount"}
+      Amount
+    %br
+    %input{:type => "text", :name => "amount", :value => @couponcode.amount}
+  %p
+    %label{:for => "quantity"}
+      Quantity
+    %br
+    %input{:type => "text", :name => "quantity", :value => @couponcode.quantity}
+  %p
+    %label{:for => "starts_at"}
+      Starts At (format: 12/12/1999 16:39:11.642)
+    %br
+    %input{:type => "text", :name => "starts_at", :value => @couponcode.starts_at}
+  %p
+    %label{:for => "expires_at"}
+      Expires At (format: 12/12/1999 16:39:11.642)
+    %br
+    %input{:type => "text", :name => "expires_at", :value => @couponcode.expires_at}
+
+  %p
+    %input{:type => "submit", :value => "Save Updates", :class => "button"}

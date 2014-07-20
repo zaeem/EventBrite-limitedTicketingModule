@@ -1,0 +1,75 @@
+%p
+  %a{:href => "/affiliate_details/new"}
+    Create New Affiliate detail
+
+%p
+  Current Affiliate details:
+
+%table{:border => "1"}
+  %tr
+    %td
+      = "id"
+    %td
+      = "modify"
+    %td
+      = "delete"
+    %td
+      = "user_id"
+    %td
+      = "percentage"
+    %td
+      = "flat_fee"
+    %td
+      = "commissionable_type"
+    %td
+      = "payment_threshold"
+    %td
+      = "locked"
+    %td
+      = "payment_method"
+    %td
+      = "affiliate_token"
+    %td
+      = "token_active"
+    %td
+      = "payments_active"
+    %td
+      = "created_at"
+    %td
+      = "updated_at"
+
+  - @affiliate_details.each do |affiliate_detail|
+    %tr
+      %td
+        = affiliate_detail.id
+      %td
+        %a{:href => "/affiliate_details/update?id="+affiliate_detail.id.to_s}
+          Modify
+      %td
+        %a{:href => "/affiliate_details/destroy?id="+affiliate_detail.id.to_s}
+          Delete
+      %td
+        = affiliate_detail.user_id
+      %td
+        = affiliate_detail.percentage
+      %td
+        = affiliate_detail.flat_fee
+      %td
+        = affiliate_detail.commissionable_type
+      %td
+        = affiliate_detail.payment_threshold
+      %td
+        = affiliate_detail.locked
+      %td
+        = affiliate_detail.payment_method
+      %td
+        = affiliate_detail.affiliate_token
+      %td
+        = affiliate_detail.token_active
+      %td
+        = affiliate_detail.payments_active
+      %td
+        = affiliate_detail.created_at
+      %td
+        = affiliate_detail.updated_at
+

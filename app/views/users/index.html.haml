@@ -1,0 +1,95 @@
+%p
+  %a{:href => "/users/new"}
+    Create New User
+
+%p
+  Current Users:
+
+%table{:border => "1"}
+  %tr
+    %td
+      = "id"
+    %td
+      = "modify"
+    %td
+      = "delete"
+    %td
+      = "title"
+    %td
+      = "email"
+    %td
+      = "username"
+    %td
+      = "password"
+    %td
+      = "title"
+    %td
+      = "first_name"
+    %td
+      = "last_name"
+    %td
+      = "middle_name"
+    %td
+      = "phone"
+    %td
+      = "phone_daytime"
+    %td
+      = "phone_evening"
+    %td
+      = "phone_cell"
+    %td
+      = "subscribe"
+    %td
+      = "sale_commission"
+    %td
+      = "negotiation_commission"
+    %td
+      = "created_at"
+    %td
+      = "updated_at"
+
+  - @users.each do |user|
+    %tr
+      %td
+        =user.id
+      %td
+        %a{:href => "/users/update?id="+user.id.to_s}
+          Modify
+      %td
+        %a{:href => "/users/destroy?id="+user.id.to_s}
+          Delete
+      %td
+        =user.title
+      %td
+        = user.email
+      %td
+        = user.username
+      %td
+        = user.password
+      %td
+        = user.title
+      %td
+        = user.first_name
+      %td
+        = user.last_name
+      %td
+        = user.middle_name
+      %td
+        = user.phone
+      %td
+        = user.phone_daytime
+      %td
+        = user.phone_evening
+      %td
+        = user.phone_cell
+      %td
+        = user.subscribe
+      %td
+        = user.sale_commission
+      %td
+        = user.negotiation_commission
+      %td
+        = user.created_at
+      %td
+        = user.updated_at
+

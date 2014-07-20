@@ -1,0 +1,82 @@
+%p
+  %a{:href => "/bids/new"}
+    Create New Bid
+
+%p
+  Current Bids:
+
+%table{:border => "1"}
+  %tr
+    %td
+      = "id"
+    %td
+      = "modify"
+    %td
+      = "delete"
+    %td
+      = "event_id"
+    %td
+      = "user_id"
+    %td
+      = "venue_group_id"
+    %td
+      = "price" 
+    %td
+      = "quantity"
+    %td
+      = "proxy"
+    %td
+      = "expires_at"
+    %td
+      = "cancel_others"
+    %td
+      = "status"
+    %td
+      = "in_hand_date"  
+    %td
+      = "is_negotiation"
+    %td
+      = "expected_ship_date"
+    %td
+      = "created_at"
+    %td
+      = "updated_at"
+
+  - @bids.each do |bid|
+    %tr
+      %td
+        = bid.id
+      %td
+        %a{:href => "/bids/update?id="+bid.id.to_s}
+          Modify
+      %td
+        %a{:href => "/bids/destroy?id="+bid.id.to_s}
+          Delete
+      %td
+        = bid.event_id
+      %td
+        = bid.user_id
+      %td
+        = bid.venue_group_id
+      %td
+        = bid.price
+      %td
+        = bid.quantity
+      %td
+        = bid.proxy
+      %td
+        = bid.expires_at
+      %td
+        = bid.cancel_others
+      %td
+        = bid.status
+      %td
+        = bid.in_hand_date
+      %td
+        = bid.is_negotiation
+      %td
+        = bid.expected_ship_date
+      %td
+        = bid.created_at
+      %td
+        = bid.updated_at

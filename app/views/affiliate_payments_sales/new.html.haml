@@ -1,0 +1,17 @@
+%p
+  New Affiliate Payment Sale
+
+%form{:action => "/affiliate_payments_sales/create", :method => "post"}
+  %p
+    %label{:for => "affiliate_payment_id"}
+      Affiliate Payment Id
+    %br
+    %input{:type => "text", :name => "affiliate_payment_id"}
+  %p
+    %label{:for => "sale_id"}
+      Sale Id
+    %br
+    %input{:type => "text", :name => "sale_id"}
+
+  %p
+    %input{:type => "submit", :value => "Create Affiliate Payment Sale", :class => "button"}

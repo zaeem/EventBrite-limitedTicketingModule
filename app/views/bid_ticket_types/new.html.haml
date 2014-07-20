@@ -1,0 +1,17 @@
+%p
+  New Bid Ticket Type
+
+%form{:action => "/bid_ticket_types/create", :method => "post"}
+  %p
+    %label{:for => "bid_id"}
+      Bid Id
+    %br
+    %input{:type => "text", :name => "bid_id"}
+  %p
+    %label{:for => "ticket_type_id"}
+      Ticket Type Id
+    %br
+    %input{:type => "text", :name => "ticket_type_id"}
+
+  %p
+    %input{:type => "submit", :value => "Create Bid Ticket Type", :class => "button"}

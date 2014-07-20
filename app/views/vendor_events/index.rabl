@@ -1,0 +1,1 @@
+collection @vendor_events

@@ -1,0 +1,18 @@
+%p
+  Modify Affiliate Payment Sale
+
+%form{:action => "/affiliate_payments_sales/modify", :method => "post"}
+  %input{:type => "hidden", :name => "id", :value => @affiliate_payments_sale.id}
+  %p
+    %label{:for => "affiliate_payment_id"}
+      Amount
+    %br
+    %input{:type => "text", :name => "affiliate_payment_id", :value => @affiliate_payments_sale.affiliate_payment_id}
+  %p
+    %label{:for => "sale_id"}
+      Sale Id
+    %br
+    %input{:type => "text", :name => "sale_id", :value => @affiliate_payments_sale.sale_id}
+
+  %p
+    %input{:type => "submit", :value => "Save Updates", :class => "button"}

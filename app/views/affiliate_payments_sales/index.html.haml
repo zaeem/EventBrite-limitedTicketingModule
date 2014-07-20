@@ -1,0 +1,43 @@
+%p
+  %a{:href => "/affiliate_payments_sales/new"}
+    Create New Affiliate Payment Sale
+
+%p
+  Current Affiliate Payments Sales:
+
+%table{:border => "1"}
+  %tr
+    %td
+      = "id"
+    %td
+      = "modify"
+    %td
+      = "delete"
+    %td
+      = "affiliate_payment_id"
+    %td
+      = "sale_id"
+    %td
+      = "created_at"
+    %td
+      = "updated_at"
+
+  - @affiliate_payments_sales.each do |affiliate_payments_sale|
+    %tr
+      %td
+        = affiliate_payments_sale.id
+      %td
+        %a{:href => "/affiliate_payments_sales/update?id="+affiliate_payments_sale.id.to_s}
+          Modify
+      %td
+        %a{:href => "/affiliate_payments_sales/destroy?id="+affiliate_payments_sale.id.to_s}
+          Delete
+      %td
+        = affiliate_payments_sale.affiliate_payment_id
+      %td
+        = affiliate_payments_sale.sale_id
+      %td
+        = affiliate_payments_sale.created_at
+      %td
+        = affiliate_payments_sale.updated_at
+

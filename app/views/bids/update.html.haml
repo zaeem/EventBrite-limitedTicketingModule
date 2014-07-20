@@ -1,0 +1,68 @@
+%p
+  Modify Bid
+
+%form{:action => "/bids/modify", :method => "post"}
+  %input{:type => "hidden", :name => "id", :value => @bid.id}
+  %p
+    %label{:for => "event_id"}
+      Event Id
+    %br
+    %input{:type => "text", :name => "event_id", :value => @bid.event_id}
+  %p
+    %label{:for => "user_id"}
+      User Id
+    %br
+    %input{:type => "text", :name => "user_id", :value => @bid.user_id}
+  %p
+    %label{:for => "venue_group_id"}
+      Venue Group Id
+    %br
+    %input{:type => "text", :name => "venue_group_id", :value => @bid.venue_group_id}
+  %p
+    %label{:for => "price"}
+      Price
+    %br
+    %input{:type => "number", :step => "any", :name => "price", :value => @bid.price}
+  %p
+    %label{:for => "quantity"}
+      Quantity
+    %br
+    %input{:type => "text", :name => "quantity", :value => @bid.quantity}
+  %p
+    %label{:for => "proxy"}
+      Proxy
+    %br
+    %input{:type => "number", :step => "any", :name => "proxy", :value => @bid.proxy}
+  %p
+    %label{:for => "expires_at"}
+      Expires At (format: 12/12/1999 16:39:11.642)
+    %br
+    %input{:type => "text", :name => "expires_at", :value => @bid.expires_at}
+  %p
+    %label{:for => "cancel_others"}
+      Cancel Others
+    %br
+    %input{:type => "checkbox", :name => "cancel_others", :checked => @bid.cancel_others ? true : false}
+  %p
+    %label{:for => "status"}
+      Status
+    %br
+    %input{:type => "text", :name => "status", :value => @bid.status}
+  %p
+    %label{:for => "in_hand_date"}
+      In Hand Date (format: 12/12/1999)
+    %br
+    %input{:type => "text", :name => "in_hand_date", :value => @bid.in_hand_date}
+  %p
+    %label{:for => "is_negotiation"}
+      Is Negotiation
+    %br
+    %input{:type => "checkbox", :name => "is_negotiation", :checked => @bid.is_negotiation ? true : false}
+  %p
+    %label{:for => "expected_ship_date"}
+      Expected Ship Date (format: 12/12/1999)
+    %br
+    %input{:type => "text", :name => "expected_ship_date", :value => @bid.expected_ship_date}
+
+  %p
+    %input{:type => "submit", :value => "Save Updates", :class => "button"}

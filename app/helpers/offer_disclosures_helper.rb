@@ -1,0 +1,2 @@
+module OfferDisclosuresHelper
+end

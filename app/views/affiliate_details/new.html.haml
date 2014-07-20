@@ -1,0 +1,57 @@
+%p
+  New Affiliate Detail
+
+%form{:action => "/affiliate_details/create", :method => "post"}
+  %p
+    %label{:for => "user_id"}
+      User id
+    %br
+    %input#user_id{:type => "text", :name => "user_id"}
+  %p
+    %label{:for => "percentage"}
+      Percentage
+    %br
+    %input{:type => "text", :name => "percentage"}
+  %p
+    %label{:for => "flat_fee"}
+      Flat Fee
+    %br
+    %input{:type => "number", :step => "any", :name => "flat_fee"}
+  %p
+    %label{:for => "commissionable_type"}
+      Commissionable Type
+    %br
+    %input{:type => "text", :name => "commissionable_type"}
+  %p
+    %label{:for => "payment_threshold"}
+      Payment Threshold
+    %br
+    %input{:type => "number", :step => "any", :name => "payment_threshold"}
+  %p
+    %label{:for => "locked"}
+      Locked
+    %br
+    %input{:type => "checkbox", :name => "locked"}
+  %p
+    %label{:for => "payment_method"}
+      Payment Method
+    %br
+    %input{:type => "text", :name => "payment_method"}
+  %p
+    %label{:for => "affiliate_token"}
+      Affiliate Token
+    %br
+    %input{:type => "text", :name => "affiliate_token"}
+  %p
+    %label{:for => "token_active"}
+      Token Active
+    %br
+    %input{:type => "checkbox", :name => "token_active"}
+  %p
+    %label{:for => "payments_active"}
+      Payments Active
+    %br
+    %input{:type => "checkbox", :name => "payments_active"}
+
+  %p
+    %input{:type => "submit", :value => "Create Affiliate Detail", :class => "button"}

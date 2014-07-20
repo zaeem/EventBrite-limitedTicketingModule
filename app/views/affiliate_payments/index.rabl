@@ -1,0 +1,1 @@
+collection @affiliate_payments

@@ -1,0 +1,43 @@
+%p
+  %a{:href => "/user_groups/new"}
+    Create New User Group
+
+%p
+  Current User Groups:
+
+%table{:border => "1"}
+  %tr
+    %td
+      = "id"
+    %td
+      = "modify"
+    %td
+      = "delete"
+    %td
+      = "name"
+    %td
+      = "admin"
+    %td
+      = "created_at"
+    %td
+      = "updated_at"
+
+  - @user_groups.each do |user_group|
+    %tr
+      %td
+        = user_group.id
+      %td
+        %a{:href => "/user_groups/update?id="+user_group.id.to_s}
+          Modify
+      %td
+        %a{:href => "/user_groups/destroy?id="+user_group.id.to_s}
+          Delete
+      %td
+        = user_group.name
+      %td
+        = user_group.admin
+      %td
+        = user_group.created_at
+      %td
+        = user_group.updated_at
+

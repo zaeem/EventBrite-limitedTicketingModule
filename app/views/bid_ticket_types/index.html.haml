@@ -1,0 +1,43 @@
+%p
+  %a{:href => "/bid_ticket_types/new"}
+    Create New Bid Ticket Type
+
+%p
+  Current Bid Ticket Types:
+
+%table{:border => "1"}
+  %tr
+    %td
+      = "id"
+    %td
+      = "modify"
+    %td
+      = "delete"
+    %td
+      = "bid_id"
+    %td
+      = "ticket_type_id"
+    %td
+      = "created_at"
+    %td
+      = "updated_at"
+
+  - @bid_ticket_types.each do |bid_ticket_type|
+    %tr
+      %td
+        = bid_ticket_type.id
+      %td
+        %a{:href => "/bid_ticket_types/update?id="+bid_ticket_type.id.to_s}
+          Modify
+      %td
+        %a{:href => "/bid_ticket_types/destroy?id="+bid_ticket_type.id.to_s}
+          Delete
+      %td
+        = bid_ticket_type.bid_id
+      %td
+        = bid_ticket_type.ticket_type_id
+      %td
+        = bid_ticket_type.created_at
+      %td
+        = bid_ticket_type.updated_at
+

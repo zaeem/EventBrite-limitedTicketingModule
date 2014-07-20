@@ -1,0 +1,37 @@
+%p
+  New Coupon Code
+
+%form{:action => "/coupon_codes/create", :method => "post"}
+  %p
+    %label{:for => "code"}
+      Code
+    %br
+    %input{:type => "text", :name => "code"}
+  %p
+    %label{:for => "discount_type"}
+      Discount Type
+    %br
+    %input{:type => "text", :name => "discount_type"}
+  %p
+    %label{:for => "amount"}
+      Amount
+    %br
+    %input{:type => "number", :step => "any", :name => "amount"}
+  %p
+    %label{:for => "quantity"}
+      Quantity
+    %br
+    %input{:type => "number", :step => "any", :name => "quantity"}
+  %p
+    %label{:for => "starts_at"}
+      Starts At (format: 12/12/1999 16:39:11.642)
+    %br
+    %input{:type => "text", :name => "starts_at"}
+  %p
+    %label{:for => "expires_at"}
+      Expires At (format: 12/12/1999 16:39:11.642)
+    %br
+    %input{:type => "text", :name => "expires_at"}
+
+  %p
+    %input{:type => "submit", :value => "Create Coupon Code", :class => "button"}

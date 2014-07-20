@@ -1,0 +1,17 @@
+%p
+  New Broker Payment Sale
+
+%form{:action => "/broker_payments_sales/create", :method => "post"}
+  %p
+    %label{:for => "broker_payment_id"}
+      Broker Payment Id
+    %br
+    %input{:type => "text", :name => "broker_payment_id"}
+  %p
+    %label{:for => "sale_id"}
+      Sale Id
+    %br
+    %input{:type => "text", :name => "sale_id"}
+
+  %p
+    %input{:type => "submit", :value => "Create Broker Payment", :class => "button"}

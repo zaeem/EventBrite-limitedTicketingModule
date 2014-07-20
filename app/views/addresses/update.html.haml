@@ -1,0 +1,53 @@
+%p
+  Modify Address                     
+
+%form{:action => "/addresses/modify", :method => "post"}
+  %input{:type => "hidden", :name => "id", :value => @address.id}
+  %p
+    %label{:for => "user_id"}
+      User Id
+    %br
+    %input#email{:type => "text", :name => "user_id", :value => @address.user_id}
+  %p
+    %label{:for => "type"}
+      Type
+    %br
+    %input{:type => "text", :name => "type", :value => @address.address_type}
+  %p
+    %label{:for => "name"}
+      Name
+    %br
+    %input{:type => "text", :name => "name", :value => @address.name}
+  %p
+    %label{:for => "address1"}
+      Address 1
+    %br
+    %input{:type => "text", :name => "address1", :value => @address.address1}
+  %p
+    %label{:for => "address2"}
+      Aaddress 2
+    %br
+    %input{:type => "text", :name => "address2", :value => @address.address2}
+  %p
+    %label{:for => "city"}
+      city
+    %br
+    %input{:type => "text", :name => "city", :value => @address.city}
+  %p
+    %label{:for => "middle_name"}
+      Middle Name
+    %br
+    %input{:type => "text", :name => "middle_name", :value => @address.phone}
+  %p
+    %label{:for => "state"}
+      State
+    %br
+    %input{:type => "text", :name => "state", :value => @address.state}
+  %p
+    %label{:for => "phone"}
+      Phone
+    %br
+    %input{:type => "text", :name => "phone", :value => @address.phone}
+
+  %p
+    %input{:type => "submit", :value => "Save Updates", :class => "button"}

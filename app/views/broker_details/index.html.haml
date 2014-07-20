@@ -1,0 +1,78 @@
+%p
+  %a{:href => "/broker_details/new"}
+    Create New Broker Detail
+
+%p
+  Current Broker Details:
+
+%table{:border => "1"}
+  %tr
+    %td
+      = "id"
+    %td
+      = "modify"
+    %td
+      = "delete"
+    %td
+      = "user_id"
+    %td
+      = "kickback_percentage"
+    %td
+      = "kickback_flat_fee"
+    %td
+      = "kickback_type"
+    %td
+      = "reduction_percentage"
+    %td
+      = "reduction_flat_fee"
+    %td
+      = "reduction_type"
+    %td
+      = "payment_threshold"
+    %td
+      = "locked"
+    %td
+      = "payment_method"
+    %td
+      = "payments_active"
+    %td
+      = "created_at"
+    %td
+      = "updated_at"
+
+  - @brokerdetails.each do |brokerdetail|
+    %tr
+      %td
+        = brokerdetail.id
+      %td
+        %a{:href => "/broker_details/update?id="+brokerdetail.id.to_s}
+          Modify
+      %td
+        %a{:href => "/broker_details/destroy?id="+brokerdetail.id.to_s}
+          Delete
+      %td
+        = brokerdetail.user_id
+      %td
+        = brokerdetail.kickback_percentage
+      %td
+        = brokerdetail.kickback_flat_fee
+      %td
+        = brokerdetail.kickback_type
+      %td
+        = brokerdetail.reduction_percentage
+      %td
+        = brokerdetail.reduction_flat_fee
+      %td
+        = brokerdetail.reduction_type
+      %td
+        = brokerdetail.payment_threshold
+      %td
+        = brokerdetail.locked
+      %td
+        = brokerdetail.payment_method
+      %td
+        = brokerdetail.payments_active
+      %td
+        = brokerdetail.created_at
+      %td
+        = brokerdetail.updated_at
